@@ -3,9 +3,9 @@
 git submodule init
 git submodule update
 
-pushd submodule/rocksdb
+cd submodule/rocksdb
 make shared_lib
-popd
+cd ../../
 
 cp submodule/rocksdb/librocksdb.so rocksdb/
 pip install "Cython>=0.20" "pyrex"
