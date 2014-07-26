@@ -41,6 +41,7 @@ setup(
     ],
     package_dir={'rocksdb': 'rocksdb'},
     packages=find_packages('.'),
+    package_data={'rocksdb': ['librocksdb.so']},
     ext_modules=cythonize([mod1]),
     test_suite='rocksdb.tests',
     include_package_data=True
